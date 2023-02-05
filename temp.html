@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="charan.css" rel="stylesheet">
+</head>
+
+<body>
+    <br>
+    <div class="cherry">
+        <h1><b>SIMPLE CALCULATOR</b></h1>
+        <P>number 1: </P>
+        <input type="textbox" placeholder="enter the number" id="n1"><br>
+        <p>number 2:</p>
+        <input type="textbox" placeholder="enter the number" id="n2"><br>
+        <P>operator:</P>
+        <input type="textbox" placeholder="operator" id="op"><br><br>
+        <button onclick="myfunc(+n1.value,+n2.value,op.value)">submit</button><br><br>
+        <input type="textbox" id="display">
+    </div><br><br><br>
+
+    <script>
+        function myfunc(a, b, oper) {
+            let ans = 0;
+            if (oper == '+') {
+                ans = a + b;
+            }
+            if (oper == '-') {
+                ans = a - b;
+            }
+            if (oper == '*') {
+                ans = a * b;
+            }
+            if (oper == '/') {
+                ans = a / b;
+            }
+            if (oper == "%") {
+                ans = a % b;
+            }
+            document.getElementById("display").value = ans;
+        }
+    </script>
+
+</body>
+
+</html>

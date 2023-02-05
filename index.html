@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="charan.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>WELCOME TO MY CALCULATOR</h1>
+    <div class="cal">
+        <input type="textbox" placeholder="enter the values:" size="30px"><br><br>
+        <div class="char">
+            <div calss="d">
+                <button class="ch">(</button>
+                <button class="ch">)</button>
+                <button class="bs">c</button>
+                <button class="eq">=</button>
+            </div><br>
+            <div class="d">
+                <button class="ch">1</button>
+                <button class="ch">2</button>
+                <button class="ch">3</button>
+                <button class="ch">+</button>
+            </div><br>
+            <div class="d">
+                <button class="ch">4</button>
+                <button class="ch">5</button>
+                <button class="ch">6</button>
+                <button class="ch">-</button>
+            </div><br>
+            <div class="d">
+                <button class="ch">7</button>
+                <button class="ch">8</button>
+                <button class="ch">9</button>
+                <button class="ch">*</button>
+            </div><br>
+            <div class="d">
+                <button class="ch">0</button>
+                <button class="ch">/</button>
+                <button class="ch">%</button>
+                <button class="ac">ac</button>
+            </div><br>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(".ch").click(function() {
+            $("input").val(
+                $("input").val() + $(this).text()
+            );
+        })
+        $(".bs").click(function() {
+            let txt = $("input").val();
+            if (txt.length) txt = txt.substring(0, txt.length - 1);
+            $("input").val(txt);
+        })
+        $(".ac").click(function() {
+            $("input").val("");
+        })
+        $(".eq").click(function() {
+            $("input").val(
+                eval(
+                    $("input").val()
+                )
+            )
+        })
+    </script>
+</body>
+
+</html>
